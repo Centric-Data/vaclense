@@ -20,7 +20,7 @@
 
 <div class="vacancy__wrapper flex flex-wrap justify-between gap-2">
 <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
-  <div class="vacancy__card flex flex-col w-3/7 rounded bg-yellow-300 p-4 shadow-md">
+  <div class="vacancy__card flex flex-col w-3/7 rounded bg-yellow-300 p-4 shadow-md w-5/12">
     <div class="vacancy__card--top flex justify-between">
       <div class="company__logo">
         <img class="w-3/5" src="<?php echo VL_PLUGIN_URL . 'img/logo-vac.png'; ?>" alt="logo">
