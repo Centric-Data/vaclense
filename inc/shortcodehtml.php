@@ -36,9 +36,18 @@
     <div class="vacancy__card--bottom flex justify-between items-center mt-2">
       <div class="bottom__details">
         <ul class="flex gap-2 p-0">
-          <li class="bg-gray-100 pt-0.5 pb-0.5 pl-1 pr-1 text-gray-400 rounded">Full Time</li>
-          <li class="bg-gray-100 pt-0.5 pb-0.5 pl-1 pr-1 text-gray-400 rounded">Senior</li>
-          <li class="bg-gray-100 pt-0.5 pb-0.5 pl-1 pr-1 text-gray-400 rounded">UX/UI</li>
+          <?php
+            $posttags = get_the_tags();
+            if ( $posttags ) {
+              foreach( $posttags as $tag ){
+                ?>
+                  <li class="bg-gray-100 pt-0.5 pb-0.5 pl-1 pr-1 text-gray-400 rounded">
+                    <?php echo $tag->name . ''; ?>
+                  </li>
+                <?php
+              }
+            }
+          ?>
         </ul>
       </div>
       <div class="more__details">
